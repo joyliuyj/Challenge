@@ -1,6 +1,8 @@
 *** Settings ***
 Library  SeleniumLibrary
-
+Library  RequestsLibrary
+Library  JSONLibrary
+Library  Collections
 *** Variables ***
 ${url}   http://localhost:8080/
 ${browser}      chrome
@@ -9,6 +11,8 @@ ${addfile1}      C:/Users/joyli/Desktop/Challenge/uploadpass.csv
 ${addfile2}      C:/Users/joyli/Desktop/Challenge/uploadfail1.csv
 ${addfile3}      C:/Users/joyli/Desktop/Challenge/uploadfail2.csv
 ${addfile4}      C:/Users/joyli/Desktop/Challenge/uploadfail3.csv
+${base_url}     http://localhost:8080
+${content_type}    application/json
 
 *** Test Cases ***
 test for upload csv file
@@ -60,13 +64,8 @@ upload file3
 upload file4
     choose file     ${uploadfiletest}    ${addfile4}
 clear data
-    click link      //a[normalize-space()='Visit Swagger']
-    sleep  2
-    click element    //span[normalize-space()='calculator-controller']
-    click element    //span[contains(text(),'/calculator/rakeDatabase')]
-    sleep  2
-    click button    //button[normalize-space()='Try it out']
-    sleep  2
-    click button    //button[normalize-space()='Execute']
+    ${header}    create dictionary    content-type=${content_type}  user-agent=robotframework
+    create session  mysession   ${base_url}     verify=true
+    ${response}=  post on session    mysession    /calculator/rakeDatabase     headers=${header}
 
 
