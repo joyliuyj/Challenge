@@ -9,10 +9,11 @@ ${browser}      chrome
 Test the button
     open browser  ${url}    ${browser}
     maximize browser window
-    scroll element into view  //a[normalize-space()='Dispense Now']
+    scroll element into view     //a[normalize-space()='Dispense Now']
+    element should be visible    //a[normalize-space()='Dispense Now']   Dispense Now
     ${elem}    Get Webelement    //a[normalize-space()='Dispense Now']
     ${bg color}    Call Method    ${elem}    value_of_css_property    background-color
-    #convert to string   ${bg color}
+
     log to console     ${bg color}
     sleep  2
     click element   //a[normalize-space()='Dispense Now']
