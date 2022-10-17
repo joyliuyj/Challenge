@@ -48,13 +48,9 @@ Insert single record success
 
 *** Keywords ***
 clear data
-    click link      //a[normalize-space()='Visit Swagger']
-    sleep  2
-    click element    //span[normalize-space()='calculator-controller']
-    click element    //span[contains(text(),'/calculator/rakeDatabase')]
-    sleep  2
-    click button    //button[normalize-space()='Try it out']
-    sleep  2
-    click button    //button[normalize-space()='Execute']
+    clear data
+    ${header}    create dictionary    content-type=${content_type}  user-agent=robotframework
+    create session  mysession   ${base_url}     verify=true
+    ${response}=  post on session    mysession    /calculator/rakeDatabase     headers=${header}
 
 
