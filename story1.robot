@@ -48,7 +48,6 @@ Insert single record success
 
 *** Keywords ***
 clear data
-    clear data
     ${header}    create dictionary    content-type=${content_type}  user-agent=robotframework
     create session  mysession   ${base_url}     verify=true
     ${response}=  post on session    mysession    /calculator/rakeDatabase     headers=${header}
