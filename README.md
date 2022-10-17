@@ -7,4 +7,4 @@
 6. Story5 is to check the background color and text for the button "Dispense Now", after click the button will prompt new page with "Cash dispensed"
 7. As a beginner I have no idea how to not hard code for the mulitple data, will learn it more.
 8. Some times will get error e.g "locator xxx not found", need to double check the locator, I've added Extensions SelectorsHub and it helped much, if keep gettsing same error then I will change the "click button/link" to "click element", sometimes if add sleep also can get correct locator.
-
+9. For clear data part, which is rakeDatabase, I was using swagger instead of API cal, have update it to API call now.
