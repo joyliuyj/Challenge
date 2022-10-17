@@ -25,7 +25,7 @@ test for upload csv file
     click button    //button[normalize-space()='Refresh Tax Relief Table']
     scroll element into view       //h1[normalize-space()='Total Tax Relieves']
     sleep  2
-    #clear data
+
 
 Get tax relief data
     ${header}    create dictionary    content-type=${content_type}  user-agent=robotframework
@@ -40,7 +40,7 @@ Get tax relief data
         ${resultMsg} =   Catenate    Expected Tax Relief for    ${natid}    is  ${expectedTaxRelief}    and actual result is    ${actualTaxRelief}
 
         Should Be Equal As Numbers  ${actualTaxRelief}  ${expectedTaxRelief}
-
+        log to console    ${natid}
         Log To Console    ${resultMsg}
         
     END
@@ -49,11 +49,5 @@ Get tax relief data
 *** Keywords ***
 upload file1
     choose file     ${uploadfiletest}    ${addfile1}
-clear data
-    click link      //a[normalize-space()='Visit Swagger']
-    click element    //span[normalize-space()='calculator-controller']
-    sleep  2
-    click element    //span[contains(text(),'/calculator/rakeDatabase')]
-    click button    //button[normalize-space()='Try it out']
-    click button    //button[normalize-space()='Execute']
+
 
