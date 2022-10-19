@@ -1,21 +1,23 @@
-#Installation:
-Windows
-Python version:  3.10.7
-PyCharm
-pip
+#Installation:                                                                   
+Windows                                                                         
+Python version:  3.10.7                                                               
+PyCharm                                                            
+pip                                                              
 
-#Execute below cmd commands 
-pip install selenium
-pip install robotframework
-pip install robotframework-requests
-pip install robotframework-jsonlibrary
-pip install robotframework-datadriver
-pip install robotframework-seleniumlibrary
+#Execute below cmd commands                                                            
+pip install selenium                                                                              
+pip install robotframework                                                             
+pip install robotframework-requests                                                    
+pip install robotframework-jsonlibrary                                                              
+pip install robotframework-datadriver                                                                                                             
+pip install robotframework-seleniumlibrary                                                            
 
 
-#Execute below commands to run automation test cases
+#Execute below commands to run automation test cases                                                                                        
 java -jar {path-to-this-jar}/OppenheimerProjectDev.jar
 robot {testcase-folder}\testcase file name
+
+#Put chromedriver.exe in Python\Scripts folder                                                                  
 
 #Test scenarios and some thought
 1. Story1 is to add a single record via API, hardcord data and go to app to check the record is added successfully, staus code is 202, then clear data.
