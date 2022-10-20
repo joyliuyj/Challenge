@@ -26,5 +26,6 @@ robot {testcase-folder}\testcase file name
 4. Story3 is to test can upload csv file from app UI, and then click "Refresh Tax Relief Table" button to check the records are added, then clear data.
 5. Story4 is to check the display of natid and amount calculation after upload csv file, I found that missing variable between 75 and 76, I think need to add this scenario. When age =18.01 then will use age <=18's variable to calculate, it's rounding off which I think it's incorrect.
 6. Story5 is to check the background color and text for the button "Dispense Now", after click the button will prompt new page with "Cash dispensed"
-7. As a beginner I have no idea how to not hard code for the mulitple data, will learn it more.
-8. Some times will get error e.g "locator xxx not found", need to double check the locator, I've added Extensions SelectorsHub and it helped much, if keep gettsing same error then I will change the "click button/link" to "click element", sometimes if add sleep also can get correct locator.
+7. Some times will get error e.g "locator xxx not found", need to double check the locator, I've added Extensions SelectorsHub and it helped much, if keep gettsing same error then I will change the "click button/link" to "click element", sometimes if add sleep also can get correct locator.
+8. As a beginner I have no idea how to not hard code for the mulitple data, will learn it more.
+9. As a tester I have more test scenarios but not sure how to develop the test case through coding.
