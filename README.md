@@ -14,7 +14,7 @@ pip install robotframework-seleniumlibrary
 
 
 #Execute below commands to run automation test cases                                                                                        
-java -jar {path-to-this-jar}/OppenheimerProjectDev.jar
+java -jar {path-to-this-jar}/OppenheimerProjectDev.jar                                                  
 robot {testcase-folder}\testcase file name
 
 #Put chromedriver.exe in Python\Scripts folder                                                                  
